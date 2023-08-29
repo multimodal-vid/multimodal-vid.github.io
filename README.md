@@ -1,2 +1,2 @@
-# multimodal-react.github.io
-[Official website for MM-ReAct](https://multimodal-react.github.io/)
+# multimodal-vid.github.io
+[Official website for MM-Vid](https://multimodal-vid.github.io/)
