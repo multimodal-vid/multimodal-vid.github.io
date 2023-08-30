@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="icon" href="./static/images/icon.png">
+  <link rel="icon" href="./static/images/icon_mm_vid_reason.png">
   <link rel="stylesheet" href="./static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -145,8 +145,6 @@
 </head>
 
 <body>
-
-
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -158,20 +156,20 @@
               Understanding System with Multimodal GPT-4 </h2>
             <div class="is-size-5">
               <span class="author-block">
+                <a href="https://www.microsoft.com/en-us/research/people/lijuanw/"
+                  style="color:#00A4EF;font-weight:normal;">Lijuan Wang<sup>&#x2660;</sup></a>
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=WR875gYAAAAJ&hl=en"
+                  style="color:#00A4EF;font-weight:normal;">Linjie Li<sup>*</sup></a>
+              </span>,
+              <span class="author-block">
                 <a href="https://sites.google.com/site/kevinlin311tw/me" style="color:#00A4EF;font-weight:normal;">Kevin
                   Lin<sup>*</sup></a>
               </span>,
               <span class="author-block">
                 <a href="https://www.microsoft.com/en-us/research/people/fiahmed/"
                   style="color:#00A4EF;font-weight:normal;">Faisal Ahmed<sup>*</sup></a>
-              </span>,
-              <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=WR875gYAAAAJ&hl=en"
-                  style="color:#00A4EF;font-weight:normal;">Linjie Li<sup>*</sup></a>
-              </span>,
-              <span class="author-block">
-                <a href="https://www.microsoft.com/en-us/research/people/lijuanw/"
-                  style="color:#00A4EF;font-weight:normal;">Lijuan Wang<sup>&#x2660;</sup></a>
               </span>
             </div>
 
@@ -288,14 +286,26 @@
       <!-- Paper Model 2. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-six-fifths">
-          <h2 class="title is-3">MM-Vid's Full Execution Flow</h2>
+          <h2 class="title is-3">MM-Vid's Video Demos</h2>
           <div class="content has-text-justified">
             <p>
               We provide an examples of MM-Vid’s full execution flow blow. More examples can be found in our paper.
             </p>
             <ul>
-              <li>The executions</li>
-              <li>ChatGPT executions </li>
+              <li>Long Video Understanding</li>
+              <iframe
+                src="videos/mr_bean_shorten_version_window_10_step_9.audio_description_v3.txt_script5_g.txt.srt.mp4"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <li>Multimodal Video Understanding
+                <ul>
+                  <li>Speech Heavy Example</li>
+                  <iframe src="videos/subaru_overlap_low_volume.mp4" frameborder="0" allow="autoplay; encrypted-media"
+                    allowfullscreen></iframe>
+                  <li>Non Speech Example</li>
+                  <iframe src="videos/snack_attack_shorten_window_10_step_9.ad_v1.txt_script9_g2.txt.srt.tts.mp4"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </ul>
+              </li>
             </ul>
           </div>
           <!--img id="model" width="60%" src="images/figure_3.gif"-->
