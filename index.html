@@ -269,13 +269,10 @@
         <div class="column is-six-fifths">
           <h2 class="title is-3">MM-Vid Pipeline</h2>
           <div class="content has-text-justified">
-            <p>
-              <b>Fill in</b>
-            </p>
           </div>
-          <img id="model" width="100%" src="images/pipeline_fig1.png">
+          <img id="model" width="100%" src="./static/images/pipeline_fig1.png">
           <p class="has-text-centered">
-            Flowchart of MM-Vid to enable image understanding with ChatGPT.
+            Step by Step AD processing from raw Video
           </p>
         </div>
       </div>
@@ -294,24 +291,21 @@
             <ul>
               <li>Long Video Understanding</li>
               <iframe
-                src="videos/mr_bean_shorten_version_window_10_step_9.audio_description_v3.txt_script5_g.txt.srt.mp4"
+                src="./static/videos/mr_bean_shorten_version_window_10_step_9.audio_description_v3.txt_script5_g.txt.srt.mp4"
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
               <li>Multimodal Video Understanding
                 <ul>
                   <li>Speech Heavy Example</li>
-                  <iframe src="videos/subaru_overlap_low_volume.mp4" frameborder="0" allow="autoplay; encrypted-media"
-                    allowfullscreen></iframe>
+                  <iframe src="./static/videos/subaru_overlap_low_volume.mp4" frameborder="0"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
                   <li>Non Speech Example</li>
-                  <iframe src="videos/snack_attack_shorten_window_10_step_9.ad_v1.txt_script9_g2.txt.srt.tts.mp4"
+                  <iframe
+                    src="./static/videos/snack_attack_shorten_window_10_step_9.ad_v1.txt_script9_g2.txt.srt.tts.mp4"
                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </ul>
               </li>
             </ul>
           </div>
-          <!--img id="model" width="60%" src="images/figure_3.gif"-->
-          <p class="has-text-centered">
-            An example of MM-Vid’s full execution flow.
-          </p>
         </div>
       </div>
     </div>
@@ -320,44 +314,6 @@
     <br>
     <!-- Paper Model 2. -->
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-six-fifths">
-        <h2 class="title is-3">Video Demo</h2>
-        <!-- <div class="publication-video">
-          <iframe src="https://user-images.githubusercontent.com/11957155/205432860-ef646e22-15fc-4527-8769-98df83381c09.mp4"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div> -->
-        <br>
-        <h3 class="subtitle has-text-centered">
-          Click each panel below for the corresponding video demo.
-        </h3>
-        <br>
-        <div class="column is-six-fifths mygrid">
-          <!--div class="grid_item"><img class="mygif" src="images/math.png"></div>
-          <div class="grid_item"><img class="mygif" src="images/squirrel_gpt4.png"></div>
-          <div class="grid_item"><img class="mygif" src="images/spatial.png"></div>
-          <div class="grid_item"><img class="mygif" src="images/recipe.png"></div>
-          <div class="grid_item"><img class="mygif" src="images/receipt.png"></div>
-          <div class="grid_item"><img class="mygif" src="images/table.png"></div>
-          <div class="grid_item"><img class="mygif" src="images/product.png"></div>
-          <div class="grid_item"><img class="mygif" src="images/celebrity.png"></div>
-          <div class="grid_item"><img class="mygif" src="images/mushroom.png"></div-->
-        </div>
-
-        <!-- <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="modalImg">
-        </div> -->
-        <div id="overlay" class="overlay">
-          <span class="close">&times;</span>
-          <div id="overlayContent"></div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-    <!--/ Paper video. -->
     </div>
   </section>
 
@@ -390,7 +346,7 @@
       <h2 class="title">BibTeX</h2>
       <pre><code>
 @article{yang2023mmreact,
-  author      = {Zhengyuan Yang* and Linjie Li* and Jianfeng Wang* and Kevin Lin* and Ehsan Azarnasab* and Faisal Ahmed* and Zicheng Liu and Ce Liu and Michael Zeng and Lijuan Wang^},
+  author      = {Linjie Li* and Lijuan Wang^ and Kevin Lin* and Faisal Ahmed*},
   title       = {MM-Vid: Towards Next Generation Video Understanding System with Multimodal GPT-4},
   publisher   = {arXiv},
   year        = {2023},
@@ -402,13 +358,6 @@
   <section class="section" id="Acknowledgement">
     <div class="container is-max-desktop content">
       <h2 class="title">Acknowledgement</h2>
-      <p>We would like to express our gratitude to <a href="https://www.microsoft.com/en-us/research/people/jfgao/"
-          style="font-weight:normal;">Jianfeng Gao</a> for his valuable suggestions, as well as to <a
-          href="https://jwyang.github.io/" style="font-weight:normal;">Jianwei Yang</a> for generously providing the
-        image editing tool utilizing the <a href="https://x-decoder-vl.github.io/"
-          style="font-weight:normal;">X-Decoder</a> framework. 
-      </p>
-      <br>
       <br>
       <p>
         This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under
