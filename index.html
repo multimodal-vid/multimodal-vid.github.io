@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="Towards Next Generation Video Understanding System with Multimodal GPT-4">
+  <meta name="description" content="Towards Next Generation Video Understanding System with Multimodal GPT-4">
   <meta name="keywords" content="MM-Vid, ChatGPT, GPT-4">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MM-Vid: Towards Next Generation Video Understanding System with Multimodal GPT-4</title>
@@ -22,15 +22,13 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="icon" href="./static/images/icon.png">
   <link rel="stylesheet" href="./static/css/index.css">
 
@@ -41,273 +39,269 @@
   <script src="./static/js/index.js"></script>
 
   <style>
-		/* Define the grid layout */
-		.mygrid {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-gap: 20px;
-			width: 80%;
-			margin: auto;
-		}
-		.grid_item {
+    /* Define the grid layout */
+    .mygrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      width: 80%;
+      margin: auto;
+    }
+
+    .grid_item {
       background: #FFFFFF;
       opacity: 1;
     }
 
-		/* Define the size of the GIFs */
-		.mygif {
-			height: auto;
-			cursor: pointer;
-		}
-		
-		/* Define the modal styles */
-		.modal {
-			display: none;
-			position: fixed;
-			z-index: 1;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			overflow: auto;
-			background-color: rgba(0,0,0,0.9);
-		}
-		
-		.modal-content {
-			margin: auto;
-			display: block;
-			width: 80%;
-			max-width: 800px;
-			max-height: 80%;
-		}
+    /* Define the size of the GIFs */
+    .mygif {
+      height: auto;
+      cursor: pointer;
+    }
+
+    /* Define the modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 800px;
+      max-height: 80%;
+    }
 
     /* Define the full-screen overlay styles */
-		.overlay {
-			position: fixed;
-			z-index: 999;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			background-color: rgba(0,0,0,0.9);
-			display: none;
-		}
-		
-		.overlay img {
-			width: auto;
-			height: 90%;
-			margin: 0 auto;
-			display: block;
-			max-width: 90%;
-			max-height: 90%;
-		}
+    .overlay {
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: none;
+    }
+
+    .overlay img {
+      width: auto;
+      height: 90%;
+      margin: 0 auto;
+      display: block;
+      max-width: 90%;
+      max-height: 90%;
+    }
 
     /* Define the video styles */
-		.gifvideo {
-			width: 100%;
-			height: auto;
-		}
+    .gifvideo {
+      width: 100%;
+      height: auto;
+    }
 
-		/* Define the progress bar styles */
-		.progress {
-			width: 100%;
-			height: 10px;
-			background-color: #ddd;
-			position: relative;
-		}
+    /* Define the progress bar styles */
+    .progress {
+      width: 100%;
+      height: 10px;
+      background-color: #ddd;
+      position: relative;
+    }
 
-		.progress-bar {
-			height: 100%;
-			background-color: #4CAF50;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-		
-		/* Define the close button style */
-		.close {
-			color: white;
-			position: absolute;
-			top: 10px;
-			right: 25px;
-			font-size: 35px;
-			font-weight: bold;
-			cursor: pointer;
-		}
-		
-		.close:hover,
-		.close:focus {
-			color: #bbb;
-			text-decoration: none;
-			cursor: pointer;
-		}
-	</style>
-  </head>
-  <body>
+    .progress-bar {
+      height: 100%;
+      background-color: #4CAF50;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    /* Define the close button style */
+    .close {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
 
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">MM-Vid <img src="./static/images/icon.png" alt="MM-Vid" width="50"/>:</h1>
-          <h2 class="title is-2 publication-title" style="width: 110%; margin-left: -5%">Towards Next Generation Video Understanding System with Multimodal GPT-4 </h2>
-          <div class="is-size-5">
-            <span class="author-block">
-              <a href="https://zyang-ur.github.io/" style="color:#00A4EF;font-weight:normal;">Zhengyuan Yang<sup>*</sup></a>
-            </span>, 
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=WR875gYAAAAJ&hl=en" style="color:#00A4EF;font-weight:normal;">Linjie Li<sup>*</sup></a>
-            </span>, 
-            <span class="author-block">
-              <a href="http://jianfengwang.me/" style="color:#00A4EF;font-weight:normal;">Jianfeng Wang<sup>*</sup></a>
-            </span>, 
-            <span class="author-block">
-              <a href="https://sites.google.com/site/kevinlin311tw/me" style="color:#00A4EF;font-weight:normal;">Kevin Lin<sup>*</sup></a>
-            </span>, 
-            <span class="author-block">
-              <a href="https://www.linkedin.com/in/azarnasab/" style="color:#00A4EF;font-weight:normal;">Ehsan Azarnasab<sup>*</sup></a>
-            </span>, 
-            <span class="author-block">
-              <a href="https://www.microsoft.com/en-us/research/people/fiahmed/" style="color:#00A4EF;font-weight:normal;">Faisal Ahmed<sup>*</sup></a>
-            </span>, 
-            <br>
-            <span class="author-block">
-              <a href="https://www.microsoft.com/en-us/research/people/zliu/" style="color:#00A4EF;font-weight:normal;">Zicheng Liu</a>
-            </span>, 
-            <span class="author-block">
-              <a href="https://www.linkedin.com/in/ce-liu-5697501a/" style="color:#00A4EF;font-weight:normal;">Ce Liu</a>
-            </span>, 
-            <span class="author-block">
-              <a href="https://www.microsoft.com/en-us/research/people/nzeng/" style="color:#00A4EF;font-weight:normal;">Michael Zeng</a>
-            </span>, 
-            <span class="author-block">
-              <a href="https://www.microsoft.com/en-us/research/people/lijuanw/" style="color:#00A4EF;font-weight:normal;">Lijuan Wang<sup>&#x2660;</sup></a>
-            </span>
-          </div>
-
-          <br>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <!-- <b style="color:#008AD7; font-weight:normal">&#x25B6 </b> -->
-              Microsoft Azure AI</span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>*</sup>Equal Technical Contribution, </span>
-            <span class="author-block"><sup>&#x2660;</sup>Project Lead </span>
-           
-          </div>
-
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2303.11381" 
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
+            <h1 class="title is-1 publication-title">MM-Vid <img src="./static/images/icon_mm_vid_reason.png"
+                alt="MM-Vid" width="120" /></h1>
+            <h2 class="title is-2 publication-title" style="width: 110%; margin-left: -5%">Towards Next Generation Video
+              Understanding System with Multimodal GPT-4 </h2>
+            <div class="is-size-5">
+              <span class="author-block">
+                <a href="https://sites.google.com/site/kevinlin311tw/me" style="color:#00A4EF;font-weight:normal;">Kevin
+                  Lin<sup>*</sup></a>
+              </span>,
+              <span class="author-block">
+                <a href="https://www.microsoft.com/en-us/research/people/fiahmed/"
+                  style="color:#00A4EF;font-weight:normal;">Faisal Ahmed<sup>*</sup></a>
+              </span>,
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=WR875gYAAAAJ&hl=en"
+                  style="color:#00A4EF;font-weight:normal;">Linjie Li<sup>*</sup></a>
+              </span>,
+              <span class="author-block">
+                <a href="https://www.microsoft.com/en-us/research/people/lijuanw/"
+                  style="color:#00A4EF;font-weight:normal;">Lijuan Wang<sup>&#x2660;</sup></a>
               </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/microsoft/mm-vid" target="_blank" 
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-              <!-- Demo Link. -->
-              <span class="link-block">
-                <a href="https://huggingface.co/spaces/microsoft-cognitive-service/mm-vid" target="_blank" 
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Live Demo</span>
-                  </a>
             </div>
 
+            <br>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <!-- <b style="color:#008AD7; font-weight:normal">&#x25B6 </b> -->
+                Microsoft Azure AI</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>*</sup>Equal Technical Contribution, </span>
+              <span class="author-block"><sup>&#x2660;</sup>Project Lead </span>
+
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2303.11381" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/microsoft/mm-vid" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Demo Link. -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/spaces/microsoft-cognitive-service/mm-vid" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Live Demo</span>
+                  </a>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!--img id="teaser" width="120%" src="images/teaser.png"-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!--img id="teaser" width="120%" src="images/teaser.png"-->
 
-      <h2 class="subtitle has-text-centered">
-        mm-vid allocates specialized vision experts with ChatGPT to solve challenging visual understanding tasks through multimodal reasoning and action.
-      </h2>
+        <h2 class="subtitle has-text-centered">
+          MM-Vid is designed to address the challenges posed by long-form videos and intricate tasks such as audio
+          description and multimodal high-level comprehension.
+        </h2>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We propose MM-Vid 
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              In the ever-evolving landscape of multimedia content, the demand for advanced video understanding systems
+              has grown exponentially. This paper introduces MM-Vid, with the aim of tackling multimodal long-form
+              video understanding problems. MM-Vid is designed to address the challenges posed by long-form videos
+              and intricate tasks such as audio description and multimodal high-level comprehension. Traditional video
+              understanding methods often struggle with processing extended video sequences and extracting insights from
+              diverse data modalities. MM-Vid addresses these limitations by prompting multimodal GPT4 with a
+              self-reflection mechanism, enabling the system to provide advanced video analysis and interpretation. We
+              demonstrate MM-Vid's ability to seamlessly navigate through lengthy video content, preserving temporal
+              context while efficiently extracting relevant information. MM-Vid generates accurate and coherent
+              audio descriptions, enhancing accessibility for visually impaired audiences and enriching overall user
+              experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+      <br>
+      <br>
+      <!-- Paper Model. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-six-fifths">
+          <h2 class="title is-3">MM-Vid Pipeline</h2>
+          <div class="content has-text-justified">
+            <p>
+              <b>Fill in</b>
+            </p>
+          </div>
+          <img id="model" width="100%" src="images/pipeline_fig1.png">
+          <p class="has-text-centered">
+            Flowchart of MM-Vid to enable image understanding with ChatGPT.
           </p>
         </div>
       </div>
-    </div>
-    <!--/ Abstract. -->
-    <br>
-    <br>
-    <!-- Paper Model. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-six-fifths">
-        <h2 class="title is-3">MM-Vid Design</h2>
-        <div class="content has-text-justified">
-          <p>
-            <b>MM-Vid is a system paradigm that composes numerous vision experts with ChatGPT for multimodal reasoning and action.</b>
+      <br>
+      <br>
+      <!-- Paper Model. -->
+
+      <!-- Paper Model 2. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-six-fifths">
+          <h2 class="title is-3">MM-Vid's Full Execution Flow</h2>
+          <div class="content has-text-justified">
+            <p>
+              We provide an examples of MM-Vid’s full execution flow blow. More examples can be found in our paper.
+            </p>
+            <ul>
+              <li>The executions</li>
+              <li>ChatGPT executions </li>
+            </ul>
+          </div>
+          <!--img id="model" width="60%" src="images/figure_3.gif"-->
+          <p class="has-text-centered">
+            An example of MM-Vid’s full execution flow.
           </p>
-          <ul>
-            <li>To enable the image as input, we simply use the file path as the input to ChatGPT. The file path functions as a placeholder, allowing ChatGPT to treat it as a black box. </li>
-          </ul>
-        </div>        
-        <!--img id="model" width="100%" src="images/model_figure_2.gif"-->
-        <p class="has-text-centered">
-          Flowchart of MM-Vid to enable image understanding with ChatGPT.
-        </p> 
-      </div>
-    </div>
-    <br>
-    <br>
-    <!-- Paper Model. -->
-    
-    <!-- Paper Model 2. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-six-fifths">
-        <h2 class="title is-3">MM-Vid's Full Execution Flow</h2>
-        <div class="content has-text-justified">
-          <p>
-            We provide an examples of MM-Vid’s full execution flow blow. More examples can be found in our paper.
-          </p>
-          <ul>
-            <li>The executions</li>
-            <li>ChatGPT executions </li>
-          </ul>
-        </div>        
-        <!--img id="model" width="60%" src="images/figure_3.gif"-->
-        <p class="has-text-centered">
-          An example of MM-Vid’s full execution flow. 
-        </p>        
         </div>
       </div>
     </div>
@@ -323,13 +317,13 @@
         <!-- <div class="publication-video">
           <iframe src="https://user-images.githubusercontent.com/11957155/205432860-ef646e22-15fc-4527-8769-98df83381c09.mp4"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div> -->  
+        </div> -->
         <br>
         <h3 class="subtitle has-text-centered">
-            Click each panel below for the corresponding video demo.
-        </h3>  
+          Click each panel below for the corresponding video demo.
+        </h3>
         <br>
-        <div class="column is-six-fifths mygrid" >
+        <div class="column is-six-fifths mygrid">
           <!--div class="grid_item"><img class="mygif" src="images/math.png"></div>
           <div class="grid_item"><img class="mygif" src="images/squirrel_gpt4.png"></div>
           <div class="grid_item"><img class="mygif" src="images/spatial.png"></div>
@@ -340,7 +334,7 @@
           <div class="grid_item"><img class="mygif" src="images/celebrity.png"></div>
           <div class="grid_item"><img class="mygif" src="images/mushroom.png"></div-->
         </div>
-        
+
         <!-- <div id="myModal" class="modal">
           <span class="close">&times;</span>
           <img class="modal-content" id="modalImg">
@@ -352,13 +346,13 @@
       </div>
     </div>
     <br>
-    <br>       
+    <br>
     <!--/ Paper video. -->
-  </div>
-</section>
+    </div>
+  </section>
 
 
-<!-- <section class="section">
+  <!-- <section class="section">
     <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
         <h2 class="title is-3">Results</h2>      
@@ -381,10 +375,10 @@
 </section> -->
 
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
 @article{yang2023mmreact,
   author      = {Zhengyuan Yang* and Linjie Li* and Jianfeng Wang* and Kevin Lin* and Ehsan Azarnasab* and Faisal Ahmed* and Zicheng Liu and Ce Liu and Michael Zeng and Lijuan Wang^},
   title       = {MM-Vid: Towards Next Generation Video Understanding System with Multimodal GPT-4},
@@ -392,78 +386,82 @@
   year        = {2023},
 }
 </code></pre>
-  </div>
-</section>
+    </div>
+  </section>
 
-<section class="section" id="Acknowledgement">
-  <div class="container is-max-desktop content">
-    <h2 class="title">Acknowledgement</h2>
-    <p>We would like to express our gratitude to <a href="https://www.microsoft.com/en-us/research/people/jfgao/" style="font-weight:normal;">Jianfeng Gao</a> for his valuable suggestions, as well as to <a href="https://jwyang.github.io/" style="font-weight:normal;">Jianwei Yang</a> for generously providing the image editing tool utilizing the <a href="https://x-decoder-vl.github.io/" style="font-weight:normal;">X-Decoder</a> framework. 
-    </p>
-    <br>
-    <br>
-    <p>
-      This website is adapted from <a
-      href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license"
-                                          href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-      Commons Attribution-ShareAlike 4.0 International License</a>.
-    </p>
-  </div>
-</section>
+  <section class="section" id="Acknowledgement">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Acknowledgement</h2>
+      <p>We would like to express our gratitude to <a href="https://www.microsoft.com/en-us/research/people/jfgao/"
+          style="font-weight:normal;">Jianfeng Gao</a> for his valuable suggestions, as well as to <a
+          href="https://jwyang.github.io/" style="font-weight:normal;">Jianwei Yang</a> for generously providing the
+        image editing tool utilizing the <a href="https://x-decoder-vl.github.io/"
+          style="font-weight:normal;">X-Decoder</a> framework. 
+      </p>
+      <br>
+      <br>
+      <p>
+        This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under
+        a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+          Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </div>
+  </section>
 
 
-<script>
-  $(".grid_item").hover(function () {
-    $(this).css("background", "#f2f1f1");
-    }, 
-    function () {
-        $(this).css("background", "#FFFFFF"); 
+  <script>
+    $(".grid_item").hover(function () {
+      $(this).css("background", "#f2f1f1");
+    },
+      function () {
+        $(this).css("background", "#FFFFFF");
+      });
+
+    // Get the modal element
+    // var modal = document.getElementById("myModal");
+    var overlay = document.getElementById("overlay");
+    var span = document.getElementsByClassName("close")[0];
+
+
+    // Get the image element and the close button element
+    //  // display the GIF as it is
+    // var img = document.getElementById("modalImg");
+    // var img = document.getElementById("overlayImg");
+    // Add event listeners to each GIF element
+    var gifs = document.getElementsByClassName("mygif");
+    for (var i = 0; i < gifs.length; i++) {
+      gifs[i].addEventListener("click", function () {
+        //  // display the GIF as it is
+        // // Set the modal image source and display the modal
+        // img.src = this.src;
+
+        // display the GIF as a new image, will play from the begining
+        var img = document.createElement("img");
+        img.src = this.src.replace(".png", ".gif");
+
+        // Add the img element to the overlay content and display the overlay
+        document.getElementById("overlayContent").appendChild(img);
+
+
+        // modal.style.display = "block";
+        overlay.style.display = "block";
+
+        // Hide the body overflow
+        document.body.style.overflow = "hidden";
+      });
+    }
+
+    // Add event listener to close button
+    span.addEventListener("click", function () {
+      // Remove the img element from the overlay content, hide the overlay, and restore the body overflow
+      document.getElementById("overlayContent").innerHTML = "";
+
+      // Hide the modal
+      // modal.style.display = "none";
+      overlay.style.display = "none";
+      document.body.style.overflow = "auto";
     });
-
-  // Get the modal element
-  // var modal = document.getElementById("myModal");
-  var overlay = document.getElementById("overlay");
-  var span = document.getElementsByClassName("close")[0];
-
-
-  // Get the image element and the close button element
-  //  // display the GIF as it is
-  // var img = document.getElementById("modalImg");
-  // var img = document.getElementById("overlayImg");
-  // Add event listeners to each GIF element
-  var gifs = document.getElementsByClassName("mygif");
-  for (var i = 0; i < gifs.length; i++) {
-  gifs[i].addEventListener("click", function() {
-      //  // display the GIF as it is
-      // // Set the modal image source and display the modal
-      // img.src = this.src;
-
-      // display the GIF as a new image, will play from the begining
-      var img = document.createElement("img");
-      img.src = this.src.replace(".png", ".gif");
-
-      // Add the img element to the overlay content and display the overlay
-      document.getElementById("overlayContent").appendChild(img);
-      
-
-      // modal.style.display = "block";
-      overlay.style.display = "block";
-
-      // Hide the body overflow
-              document.body.style.overflow = "hidden";
-  });
-  }
-
-  // Add event listener to close button
-  span.addEventListener("click", function() {
-  // Remove the img element from the overlay content, hide the overlay, and restore the body overflow
-          document.getElementById("overlayContent").innerHTML = "";
-
-  // Hide the modal
-  // modal.style.display = "none";
-  overlay.style.display = "none";
-  document.body.style.overflow = "auto";
-  });
-</script>
+  </script>
 </body>
+
 </html>
