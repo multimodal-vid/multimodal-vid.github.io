@@ -238,17 +238,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              In the ever-evolving landscape of multimedia content, the demand for advanced video understanding systems
-              has grown exponentially. This paper introduces MM-Vid, with the aim of tackling multimodal long-form
-              video understanding problems. MM-Vid is designed to address the challenges posed by long-form videos
-              and intricate tasks such as audio description and multimodal high-level comprehension. Traditional video
-              understanding methods often struggle with processing extended video sequences and extracting insights from
-              diverse data modalities. MM-Vid addresses these limitations by prompting multimodal GPT4 with a
-              self-reflection mechanism, enabling the system to provide advanced video analysis and interpretation. We
-              demonstrate MM-Vid's ability to seamlessly navigate through lengthy video content, preserving temporal
-              context while efficiently extracting relevant information. MM-Vid generates accurate and coherent
-              audio descriptions, enhancing accessibility for visually impaired audiences and enriching overall user
-              experiences.
+              We present MM-VID, an integrated system pipeline that harnesses the capabilities of multimodal GPT-4, combined with expert tools in vision, audio, and speech, to facilitate advanced video understanding. MM-VID is designed to address the challenges posed by long-form videos and intricate tasks such as reasoning within hour-long content and grasping storylines spanning multiple episodes. MM-VID uses a video-to-script generation that transcribes multimodal elements into textual narratives similar to movie scripts. The generated scripts detail character movements, actions, expressions, and dialogues, paving the way for large language models (LLM) to achieve video understanding. This enables advanced functionalities, including audio description, character identification, and multimodal high-level comprehension. Our zero-shot experiments demonstrate the effectiveness of MM-VID in handling distinct video genres with various video lengths. Additionally, we showcase its potential in generating audio description, enhancing accessibility for visually impaired audiences.
             </p>
           </div>
         </div>
@@ -259,13 +249,21 @@
       <!-- Paper Model. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-six-fifths">
-          <h2 class="title is-3">MM-Vid Pipeline</h2>
-          <div class="content has-text-justified">
-          </div>
-          <img id="model" width="100%" src="./static/images/pipeline_fig1.png">
-          <p class="has-text-centered">
-            Step by Step AD processing from raw Video
-          </p>
+          <div class="content text-center">
+            <h2>MM-Vid Architecture</h2>
+            <h3>Pipeline</h3>
+            <div class="content has-text-justified">
+            </div>
+            <img id="model" width="100%" src="./static/images/pipeline_fig1.png">
+            <br>
+            <br>
+            <br>
+            <h3>Self Reflection Loop</h3>
+            <div class="content has-text-justified">
+            </div>
+            <img id="model" width="100%" src="./static/images/self_reflection.png">
+            <br>            
+          </div>          
         </div>
       </div>
       <br>
@@ -275,17 +273,28 @@
       <!-- Paper Model 2. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-six-fifths">
-          <h2 class="title is-3">MM-Vid's Video Demos</h2>
-          <h3>Video Description Generation using LMM</h3>
-          <div class="publication-video">
-              <video width="100%" height="auto" controls>
-                <source
-                  src="./static/videos/Untitled_104.mp4"
-                  type=video/mp4>
-              </video>
+          <div class="content text-center">
+            <h2>MM-Vid's Video Demos</h2>
+            <h3>Video Description Generation, temporal grounding and QA using LMM</h3>
+            <div class="publication-video">
+                <video width="100%" height="auto" controls>
+                  <source
+                    src="./static/videos/Untitled_104_h264.mp4"
+                    type=video/mp4>
+                </video>
+            </div>  
+            <br>
+            <br>
+            <h3>Multi video Analysis</h3>
+            <div class="publication-video">
+                <video width="100%" height="auto" controls>
+                  <source
+                    src="./static/videos/Untitled_105.mp4"
+                    type=video/mp4>
+                </video>
 
-          </div>  
-          <br>
+            </div>  
+          </div>          
           <br>
           <br>
           <div class="content has-text-justified">
