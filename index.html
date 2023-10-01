@@ -405,8 +405,54 @@
     <br>
     <br>
     <!-- Paper Model 2. -->
-
     </div>
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Video Demo</h2>
+        <!-- <div class="publication-video">
+          <iframe src="https://user-images.githubusercontent.com/11957155/205432860-ef646e22-15fc-4527-8769-98df83381c09.mp4"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div> -->  
+        <br>
+        <h3 class="subtitle has-text-centered">
+            Click each panel below for the corresponding video demo.
+        </h3>  
+        <br>
+        <div class="column is-six-fifths mygrid" >
+          <div class="grid_item"><img class="mygif" src="static/videos/Untitled_110.png"></div>
+          <div class="grid_item"><img class="mygif" src="static/videos/Untitled_108.png"></div>
+          <div class="grid_item"><img class="mygif" src="static/videos/game_1.png"></div>
+          <div class="grid_item"><img class="mygif" src="static/videos/mr_bean_shorten_version_window_10_step_9.audio_description_v3.txt_script5_g.txt.srt_h264.png"></div>
+          <div class="grid_item"><img class="mygif" src="static/videos/subaru_overlap_low_volume_h264.png"></div>
+          <div class="grid_item"><img class="mygif" src="static/videos/snack_attack_shorten_window_10_step_9.ad_v1.txt_script9_g2.txt.srt.tts_h264.png"></div>
+          <div class="grid_item"><img class="mygif" src="static/videos/mummies_window_7_step_6.vp.ad_v1.txt_script7_g4_v1.txt_script1_g2.txt.srt.tts_sr_20_h264.png"></div>
+          <div class="grid_item"><img class="mygif" src="static/videos/the_color_of_paradise_shorten_window_10_step_9.audio_description_v4.txt_script9_g6.txt.srt.tts_h264.png"></div>
+          <div class="grid_item"><img class="mygif" src="static/videos/t_c_o_p_s_window_10_step_9.audio_description_v4.txt_script9_g6_revise.txt_script8_g1.txt.srt.tts_h264.png"></div>
+          <div class="grid_item"><img class="mygif" src="static/videos/wildlife_cyprus_shorten_window_10_step_9.ad_v1.txt_script10_g1.noscenedetect.srt.2x.tts.png"></div>
+          <div class="grid_item"><img class="mygif" src="static/videos/wildlife_cyprus_shorten_window_10_step_9_asr_False_scenedetect_gptv_v1.txt_script3_g1.txt.srt.2x.tts.png"></div>
+          <div class="grid_item"><img class="mygif" src="static/videos/apple_sady_window_10_step_9.ad_v1.txt_script1_g1.txt_gap_info_v1.txt_script1_g1.txt1.srt.tts_shorten_1_h264.png"></div>
+          <div class="grid_item"><img class="mygif" src="static/videos/nimona_window_8_step_7.vp.ad_v1_speaker_v1.txt_script1_g5.txt.srt_h264.png"></div>
+          <div class="grid_item"><img class="mygif" src="static/videos/nomal_speed_tiktok_apple_banana_window_10_step_9.ad_v1.txt_script2_g2.txt.srt.4x.tts_h264.png"></div>
+        </div>
+        
+        <!-- <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImg">
+        </div> -->
+        <div id="overlay" class="overlay">
+          <span class="close">&times;</span>
+          <div id="overlayContent"></div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>       
+    <!--/ Paper video. -->
+  </div>
+
+
   </section>
 
 
@@ -487,8 +533,9 @@
         // img.src = this.src;
 
         // display the GIF as a new image, will play from the begining
-        var img = document.createElement("img");
-        img.src = this.src.replace(".png", ".gif");
+        var img = document.createElement("video");
+        img.src = this.src.replace(".png", ".mp4");
+        img.autoplay = true;
 
         // Add the img element to the overlay content and display the overlay
         document.getElementById("overlayContent").appendChild(img);
