@@ -434,7 +434,7 @@
           <div class="grid_item"><img class="mygif" src="static/videos/wildlife_cyprus_shorten_window_10_step_9_asr_False_scenedetect_gptv_v1.txt_script3_g1.txt.srt.2x.tts.png"></div>
           <div class="grid_item"><img class="mygif" src="static/videos/apple_sady_window_10_step_9.ad_v1.txt_script1_g1.txt_gap_info_v1.txt_script1_g1.txt1.srt.tts_shorten_1_h264.png"></div>
           <div class="grid_item"><img class="mygif" src="static/videos/nimona_window_8_step_7.vp.ad_v1_speaker_v1.txt_script1_g5.txt.srt_h264.png"></div>
-          <div class="grid_item"><img class="mygif" src="static/videos/nomal_speed_tiktok_apple_banana_window_10_step_9.ad_v1.txt_script2_g2.txt.srt.4x.tts_h264.png"></div>
+          <div class="grid_item"><img class="mygif" src="static/videos/tiktok_apple_banana_window_10_step_9.ad_v1.txt_script2_g2.txt.srt.4x.tts_no_sound.png"></div>
         </div>
         
         <!-- <div id="myModal" class="modal">
@@ -533,12 +533,14 @@
         // img.src = this.src;
 
         // display the GIF as a new image, will play from the begining
-        var img = document.createElement("video");
-        img.src = this.src.replace(".png", ".mp4");
-        img.autoplay = true;
+        var vdo = document.createElement("video");
+        vdo.src = this.src.replace(".png", ".mp4");
+        vdo.autoplay = true;
+        vdo.controls = true;
+        vdo.width = 800;
 
-        // Add the img element to the overlay content and display the overlay
-        document.getElementById("overlayContent").appendChild(img);
+        // Add the vdo element to the overlay content and display the overlay
+        document.getElementById("overlayContent").appendChild(vdo);
 
 
         // modal.style.display = "block";
